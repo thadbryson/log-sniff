@@ -1,0 +1,7 @@
+[01-Sep-2014 00:00:30 America/New_York] PHP Notice: some notice go here
+[21-Sep-2014 15:53:53 America/New_York] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /var/www/class.base.php on line 134
+[21-Sep-2014 15:53:53 America/New_York] PHP Stack trace:
+[21-Sep-2014 15:53:53 America/New_York] PHP   1. {main}() /var/www/organizer/home.php:0
+[21-Sep-2014 15:53:53 America/New_York] PHP   2. base->base() /var/www/organizer/home.php:7
+[21-Sep-2014 15:53:53 America/New_York] PHP   3. base->get_data() /var/www/class.base.php:29
+[21-Sep-2014 15:53:53 America/New_York] PHP   4. mysql_free_result() /var/www/class.base.php:134

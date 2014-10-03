@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0'>
+<channel>
+    <title>Error Log</title>
+    <language>en-us</language>
+    <pubDate>Fri, 03 Oct 2014 11:25:35 -0400</pubDate>
+    <item>
+        <title>WARNING</title>
+        <pubDate>Sun, 21 Sep 2014 15:53:53 -0400</pubDate>
+        <description>
+Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /var/www/class.base.php on line 134
+Stack trace:
+1. {main}() /var/www/organizer/home.php:0
+2. base->base() /var/www/organizer/home.php:7
+3. base->get_data() /var/www/class.base.php:29
+4. mysql_free_result() /var/www/class.base.php:134
+        </description>
+    </item>
+</channel>
+</rss>

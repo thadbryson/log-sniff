@@ -1,0 +1,21 @@
+{
+    "name": "thadbryson/error-sniffer",
+
+    "authors": [
+        {
+            "name":         "Thad Bryson",
+            "email":        "thadbry@gmail.com",
+            "homepage":     "http://thadbryson.co"
+        }
+    ],
+
+    "require": {
+        "monolog/monolog":      "1.10.*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "TCB\\": "src/"
+        }
+    }
+}
