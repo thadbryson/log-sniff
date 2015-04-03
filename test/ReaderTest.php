@@ -14,7 +14,12 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
         $monolog->pushHandler($testHandler);
 
         $reader->addHandler(new TCB\ErrorSniffer\Handler\Monolog($monolog));
-        $reader->addHandler(new TCB\ErrorSniffer\Handler\PrintOutput());
+
+        $printOutput = new TCB\ErrorSniffer\Handler\PrintOutput();
+        $printOutput->on = false;
+
+        $reader->addHandler($printOutput);
+
         $reader->addHandler(new TCB\ErrorSniffer\Handler\MemoryOutput());
         $reader->addHandler(new TCB\ErrorSniffer\Handler\RSS(__DIR__.'/files/rss'));
 

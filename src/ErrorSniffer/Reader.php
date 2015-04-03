@@ -33,13 +33,6 @@ class Reader
         return new \TCB\ErrorSniffer\ErrorModel($line);
     }
 
-    protected function isSkippable($line)
-    {
-
-
-        return false;
-    }
-
     protected function isNewError($currLine)
     {
         return (substr($currLine->getMessage(), 0, 12) !== 'Stack trace:' && !is_numeric(substr($currLine->getMessage(), 0, 1)));
