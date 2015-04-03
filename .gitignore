@@ -9,3 +9,5 @@ vendor/
 composer.lock
 
 docs/
+
+test/files/rss
