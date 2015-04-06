@@ -4,7 +4,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
 {
     public function testReader()
     {
-        $reader = new \TCB\ErrorSniffer\Reader(__DIR__.'/files/error_log_test');
+        $reader = new \TCB\LogSniffer\Reader(__DIR__.'/files/error_log_test');
         $reader->setDateLimit('2014-09-02');
 
         $monolog = new Monolog\Logger('testLogger');
@@ -13,15 +13,15 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
         $testHandler = new Monolog\Handler\TestHandler();
         $monolog->pushHandler($testHandler);
 
-        $reader->addHandler(new TCB\ErrorSniffer\Handler\Monolog($monolog));
+        $reader->addHandler(new TCB\LogSniffer\Handler\Monolog($monolog));
 
-        $printOutput = new TCB\ErrorSniffer\Handler\PrintOutput();
+        $printOutput = new TCB\LogSniffer\Handler\PrintOutput();
         $printOutput->on = false;
 
         $reader->addHandler($printOutput);
 
-        $reader->addHandler(new TCB\ErrorSniffer\Handler\MemoryOutput());
-        $reader->addHandler(new TCB\ErrorSniffer\Handler\RSS(__DIR__.'/files/rss'));
+        $reader->addHandler(new TCB\LogSniffer\Handler\MemoryOutput());
+        $reader->addHandler(new TCB\LogSniffer\Handler\RSS(__DIR__.'/files/rss'));
 
         $this->assertEquals(1, $reader->run());
         $this->assertEquals(1, count($testHandler->getRecords()));

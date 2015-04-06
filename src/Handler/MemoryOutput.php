@@ -1,6 +1,6 @@
 <?php
 
-namespace TCB\ErrorSniffer\Handler;
+namespace TCB\LogSniffer\Handler;
 
 class MemoryOutput implements Handler
 {
@@ -28,7 +28,7 @@ class MemoryOutput implements Handler
         return number_format($size)." bytes";
     }
 
-    public function log(\TCB\ErrorSniffer\ErrorModel $error)
+    public function log(\TCB\LogSniffer\ErrorModel $error)
     {
         echo "\nMemory: ". $this->format(memory_get_usage());
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace TCB\ErrorSniffer\Handler;
+namespace TCB\LogSniffer\Handler;
 
 class Monolog implements Handler
 {
@@ -16,7 +16,7 @@ class Monolog implements Handler
     public function start() {}
     public function finish() {}
 
-    public function log(\TCB\ErrorSniffer\ErrorModel $error)
+    public function log(\TCB\LogSniffer\ErrorModel $error)
     {
         $message = $error->getDatetime()->format('Y-m-d H:i:s e').' '.$error->getMessage();
 

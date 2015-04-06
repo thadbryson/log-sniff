@@ -1,6 +1,6 @@
 <?php
 
-namespace TCB\ErrorSniffer;
+namespace TCB\LogSniffer;
 
 class Reader
 {
@@ -30,7 +30,7 @@ class Reader
 
     protected function factoryError($line)
     {
-        return new \TCB\ErrorSniffer\ErrorModel($line);
+        return new \TCB\LogSniffer\ErrorModel($line);
     }
 
     protected function isNewError($currLine)

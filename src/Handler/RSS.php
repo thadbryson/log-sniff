@@ -1,6 +1,6 @@
 <?php
 
-namespace TCB\ErrorSniffer\Handler;
+namespace TCB\LogSniffer\Handler;
 
 class RSS implements Handler
 {
@@ -34,7 +34,7 @@ EOT;
         file_put_contents($this->file, "\n</channel>\n</rss>", FILE_APPEND);
     }
 
-    public function log(\TCB\ErrorSniffer\ErrorModel $error)
+    public function log(\TCB\LogSniffer\ErrorModel $error)
     {
         $item = <<<EOT
 

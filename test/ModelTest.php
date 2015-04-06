@@ -6,7 +6,7 @@ class ModelTest extends \PHPUnit_Framework_TestCase
 
     public function testModel()
     {
-        $error = new \TCB\ErrorSniffer\ErrorModel("[21-Sep-2014 15:53:53 America/New_York] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /var/www/MyClass.php on line 134");
+        $error = new \TCB\LogSniffer\ErrorModel("[21-Sep-2014 15:53:53 America/New_York] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /var/www/MyClass.php on line 134");
 
         $this->assertEquals('Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /var/www/MyClass.php on line 134', $error->getMessage());
 

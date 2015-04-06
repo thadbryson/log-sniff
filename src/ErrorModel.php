@@ -1,6 +1,6 @@
 <?php
 
-namespace TCB\ErrorSniffer;
+namespace TCB\LogSniffer;
 
 class ErrorModel
 {
